@@ -6,12 +6,12 @@ counter = 0
 print("Hallo, willkommen zu meinem Spiel Number Guess! Willst du zufällige Zahlen benutzen? [J/n]:")
 zufall = input()
 
-while not zufall == "j" and not zufall == "n":
+while zufall != "j" and zufall != "n":
   print("Bitte gib j oder n ein:")
   zufall = input()
 
 if zufall == "j":
-  z = (random.randint  (0, 100))
+  z = (random.randint(0, 100))
 elif zufall == "n":
   print("Die erste Zahl, bitte:")
   z1 = int(input())
@@ -22,7 +22,7 @@ elif zufall == "n":
   z2 = int(input())
   
 if z1 > z2:
-  z = random.randint (z1, z2)
+  z = random.randint(z1, z2)
 else:
   print("Da stimmt etwas nicht, mit deinen Nummern!")
   time.sleep(5)
